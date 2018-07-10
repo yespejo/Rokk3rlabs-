@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-controller="controller">
+    <label>Id</label>
+    <input type="text" ng-model="newRegister.id">
+    <label>Nombre</label>
+    <input type="text" ng-model="newRegister.name">
+        <label>Fecha de vencimiento</label>
+    <input type="text" ng-model="newRegister.dueDate">
+    <label> Prioridad</label>
+    <input type="text" ng-model="newRegister.priority">
+    <button ng-click="addRegister()">Guardar</button>
+    <button ng-click="removeRegister()">Eliminar</button>
+    <button ng-click="updateRegister()">Update</button>
+    <ul>
+        <li ng-repeat="post in posts">
+            <b>{{post.title}}</b>
+            <b>{{post.description}}</b>
+            <b>{{post.dueDate}}</b>
+            <b>{{post.owner}}</b>
+            <b>{{post.priority}}</b>
+            <b>{{post.taskStatus}}</b>
+            <b>{{post.updatedAt}}</b>
+            <b>{{post.title}}</b>
+        </li>
+    </ul>
+
+    <ul>
+            <li ng-repeat="post in posts">
+                <b>{{post.title}}</b>
+                <b>{{post.description}}</b>
+                <b>{{post.dueDate}}</b>
+                <b>{{post.owner}}</b>
+                <b>{{post.priority}}</b>
+                <b>{{post.taskStatus}}</b>
+                <b>{{post.updatedAt}}</b>
+                <b>{{post.title}}</b>
+            </li>
+        </ul>
+    </body>
+</html>
